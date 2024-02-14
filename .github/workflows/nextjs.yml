@@ -30,13 +30,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
 
-      - name: 'Create env file'
-        run: |
-           touch .env
-           echo UPSTASH_REDIS_REST_URL=${{ variables.UPSTASH_REDIS_REST_URL }} >> .env
-           echo UPSTASH_REDIS_REST_TOKEN=${{ variables.UPSTASH_REDIS_REST_TOKEN }} >> .env
-           cat .env
-
       - name: Checkout
         uses: actions/checkout@v4
 
@@ -82,7 +75,10 @@ jobs:
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
 
       - name: Build with Next.js
-        run: ${{ steps.detect-package-manager.outputs.runner }} next build
+        run: |
+          NEXT_PUBLIC_UPSTASH_REDIS_REST_URL=$UPSTASH_REDIS_REST_URL \
+          NEXT_PUBLIC_UPSTASH_REDIS_REST_TOKEN=$UPSTASH_REDIS_REST_TOKEN \
+          ${{ steps.detect-package-manager.outputs.runner }} next build
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
