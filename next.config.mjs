@@ -9,4 +9,4 @@ const nextConfig = {
 	output: "export",
 };
 
-export default withContentlayer(nextConfig);
+export default nextConfig;
