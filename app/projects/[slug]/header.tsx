@@ -1,7 +1,7 @@
 "use client";
-import { ArrowLeft, Eye, Github, Twitter } from "lucide-react";
+import { ArrowLeft, Github, Twitter } from "lucide-react";
 import Link from "next/link";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 
 type Props = {
 	project: {
@@ -13,7 +13,7 @@ type Props = {
 
 	views: number;
 };
-export const Header: React.FC<Props> = ({ project, views }) => {
+export const Header: React.FC<Props> = ({ project}) => {
 	const ref = useRef<HTMLElement>(null);
 	const [isIntersecting, setIntersecting] = useState(true);
 
@@ -30,7 +30,7 @@ export const Header: React.FC<Props> = ({ project, views }) => {
 			href: project.url,
 		});
 	}
-	useEffect(() => {
+/* 	useEffect(() => {
 		if (!ref.current) return;
 		const observer = new IntersectionObserver(([entry]) =>
 			setIntersecting(entry.isIntersecting),
@@ -38,7 +38,9 @@ export const Header: React.FC<Props> = ({ project, views }) => {
 
 		observer.observe(ref.current);
 		return () => observer.disconnect();
-	}, []);
+	}, 
+	
+	[]); */
 
 	return (
 		<header
