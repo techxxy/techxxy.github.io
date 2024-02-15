@@ -1,6 +1,6 @@
 import "../global.css";
-import { Inter } from "@next/font/google";
-import LocalFont from "@next/font/local";
+import { Inter } from "next/font/google";
+import LocalFont from "next/font/local";
 import { Metadata } from "next";
 import { Analytics } from "./components/analytics";
 
@@ -8,23 +8,6 @@ export const metadata: Metadata = {
   title: {
     default: "techxxy",
     template: "%s | techxxy",
-  },
-  description: "",
-  openGraph: {
-    title: "techxxy",
-    description:
-      "",
-    url: "https://techxxy.github.io",
-    siteName: "",
-    images: [
-      {
-        url: "",
-        width: 1920,
-        height: 1080,
-      },
-    ],
-    locale: "en-US",
-    type: "website",
   },
   robots: {
     index: true,
@@ -36,13 +19,6 @@ export const metadata: Metadata = {
       "max-image-preview": "large",
       "max-snippet": -1,
     },
-  },
-  twitter: {
-    title: "",
-    card: "summary_large_image",
-  },
-  icons: {
-    shortcut: "/favicon.png",
   },
 };
 const inter = Inter({
