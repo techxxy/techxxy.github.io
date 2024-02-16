@@ -3,6 +3,7 @@
 import projects__appleKeyboardMdx from './projects__appleKeyboard.mdx.json' assert { type: 'json' }
 import projects__boilerplateDeploymentMdx from './projects__boilerplateDeployment.mdx.json' assert { type: 'json' }
 import projects__fireupkoreanalphabetMdx from './projects__fireupkoreanalphabet.mdx.json' assert { type: 'json' }
+import projects__newprojectMdx from './projects__newproject.mdx.json' assert { type: 'json' }
 import projects__techxxyGithubIoMdx from './projects__techxxy.github.io.mdx.json' assert { type: 'json' }
 
-export const allProjects = [projects__appleKeyboardMdx, projects__boilerplateDeploymentMdx, projects__fireupkoreanalphabetMdx, projects__techxxyGithubIoMdx]
+export const allProjects = [projects__appleKeyboardMdx, projects__boilerplateDeploymentMdx, projects__fireupkoreanalphabetMdx, projects__newprojectMdx, projects__techxxyGithubIoMdx]

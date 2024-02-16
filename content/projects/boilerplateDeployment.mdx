@@ -2,19 +2,19 @@
 title: Deploying Next.js App on GitHub Pages
 description: Simplified Guide - Deploying Next.js Boilerplate on GitHub Pages
 date: "2024-02-13"
-url: https://techxxy.github.io/pure-css-apple-keyboard
+url: https://techxxy.github.io/nextjs-boilerplate-on-pages
 published: true
-
+repository: techxxy/nextjs-boilerplate-on-pages
 ---
 
+Deploying a simple Next.js project to GitHub Pages can be relatively straightforward, but like any technical endeavor, it has its quirks. Recently, I encountered a common error while attempting to deploy “Next.js Boilerplate”, which a ready-made template or starting point that provides basic structure and functionality.
 
-Deploying a Next.js application to GitHub Pages can be a seamless process, but like any technical endeavor, it has its quirks. Recently, I encountered a common error while attempting to deploy a Next.js boilerplate to GitHub Pages. The default .yml file provided by GitHub Pages Action was triggering an error: “The "next export" command has been removed in favor of "output: export" in next.config.js.”
-
+The default .yml file provided by GitHub Pages Action was triggering an error: “The "next export" command has been removed in favor of "output: export" in next.config.js.”
 ![](/deployError.png)
 
+After a bit of troubleshooting, I stumbled upon a post titled “How to Deploy Next.js Apps to GitHub Pages” on FreeCodeCamp. Excitedly, I followed the instructions only to find that they didn't quite work for my setup. The .yml file failed to trigger GitHub Action when I pushed the source code to the repository. It turned out that the discrepancy lay in the branch naming: my repository was on the “main” branch, while the repository in the post was on the “master” branch. A simple adjustment from "master" to "main" in the .yml file was the fix I needed.
 
-After a bit of troubleshooting, I stumbled upon a post titled “How to Deploy Next.js Apps to GitHub Pages” on FreeCodeCamp (https://www.freecodecamp.org/news/how-to-deploy-next-js-app-to-github-pages). Excitedly, I followed the instructions only to find that they didn't quite work for my setup. The .yml file failed to trigger GitHub Action when I pushed the source code to the repository. It turned out that the discrepancy lay in the branch naming: my repository was on the “main” branch, while the repository in the post was on the “master” branch. A simple adjustment from "master" to "main" in the .yml file was the fix I needed.
-
+### Perfect example respository
 Fortunately, persistence paid off. After some further digging, I stumbled upon the perfect example repository (https://github.com/gregrickaby/nextjs-github-pages), which provided a clear and concise solution. Following its guidelines, I successfully deployed my Next.js application to GitHub Pages without a hitch.
 
 If you find yourself encountering similar deployment hurdles, don’t be discouraged. With the right resources and a bit of patience, you can overcome them and get your Next.js project up and running on GitHub Pages in no time.
