@@ -1,6 +1,29 @@
 [
   {
     "published": true,
+    "title": "techxxy.github.io",
+    "description": "The website you're looking at",
+    "date": "2024-02-15T00:00:00.000Z",
+    "url": "https://techxxy.github.io",
+    "repository": "chronark/chronark.com",
+    "body": {
+      "raw": "\n\nLike so many others, I just wanted a place to collect some projects I worked on. Maybe I'll add a blog, maybe I won't. I'm not sure yet.\n\nIf you like the design, check out the Repository on GitHub.\n\n",
+      "code": "var Component=(()=>{var l=Object.create;var s=Object.defineProperty;var d=Object.getOwnPropertyDescriptor;var m=Object.getOwnPropertyNames;var p=Object.getPrototypeOf,x=Object.prototype.hasOwnProperty;var y=(t,e)=>()=>(e||t((e={exports:{}}).exports,e),e.exports),b=(t,e)=>{for(var n in e)s(t,n,{get:e[n],enumerable:!0})},i=(t,e,n,c)=>{if(e&&typeof e==\"object\"||typeof e==\"function\")for(let r of m(e))!x.call(t,r)&&r!==n&&s(t,r,{get:()=>e[r],enumerable:!(c=d(e,r))||c.enumerable});return t};var g=(t,e,n)=>(n=t!=null?l(p(t)):{},i(e||!t||!t.__esModule?s(n,\"default\",{value:t,enumerable:!0}):n,t)),j=t=>i(s({},\"__esModule\",{value:!0}),t);var u=y((M,a)=>{a.exports=_jsx_runtime});var w={};b(w,{default:()=>f,frontmatter:()=>k});var o=g(u()),k={title:\"techxxy.github.io\",description:\"The website you're looking at\",repository:\"chronark/chronark.com\",url:\"https://techxxy.github.io\",date:new Date(17079552e5),published:!0};function h(t){let e=Object.assign({p:\"p\"},t.components);return(0,o.jsxs)(o.Fragment,{children:[(0,o.jsx)(e.p,{children:\"Like so many others, I just wanted a place to collect some projects I worked on. Maybe I'll add a blog, maybe I won't. I'm not sure yet.\"}),`\n`,(0,o.jsx)(e.p,{children:\"If you like the design, check out the Repository on GitHub.\"})]})}function _(t={}){let{wrapper:e}=t.components||{};return e?(0,o.jsx)(e,Object.assign({},t,{children:(0,o.jsx)(h,t)})):h(t)}var f=_;return j(w);})();\n;return Component;"
+    },
+    "_id": "projects/appleKeyboard.mdx",
+    "_raw": {
+      "sourceFilePath": "projects/appleKeyboard.mdx",
+      "sourceFileName": "appleKeyboard.mdx",
+      "sourceFileDir": "projects",
+      "contentType": "mdx",
+      "flattenedPath": "projects/appleKeyboard"
+    },
+    "type": "Project",
+    "path": "/projects/appleKeyboard",
+    "slug": "appleKeyboard"
+  },
+  {
+    "published": true,
     "title": "Deploying Next.js App on GitHub Pages",
     "description": "Simplified Guide - Deploying Next.js Boilerplate on GitHub Pages",
     "date": "2024-02-13T00:00:00.000Z",
