@@ -1,14 +1,30 @@
 ---
-title: techxxy.github.io
-description: The website you're looking at
-repository: chronark/chronark.com
+title: Be My Static Website
+description: techxxy.github.io - the website you're looking at
+repository: techxxy/techxxy.github.io
 url: https://techxxy.github.io
 date: 2024-02-15
 published: true
 ---
 
+Finally, my own website is up and running! I based it on [Next.js Portfolio with Pageview Counter](https://vercel.com/templates/next.js/nextjs-portfolio-pageview-counter) and deployed it on GitHub Pages.
 
-Like so many others, I just wanted a place to collect some projects I worked on. Maybe I'll add a blog, maybe I won't. I'm not sure yet.
+Using Vercel was a breeze. Just clicking the "Deploy" button forks the Next.js app template into a GitHub repository and deploys it on Vercel. Plus, it guides you through setting up an Upstash account and creating a serverless database along the way. It's super easy and trouble-free.
 
-If you like the design, check out the Repository on GitHub.
+However, I chose a more challenging (and possibly foolish) route by opting to deploy it on GitHub Pages. Why? Because I was on the hunt for a cool blog template for my techxxy.github.io pages, and the Next.js Portfolio with Pageview Counter was just too irresistible.
 
+The catch? Only static pages can be deployed on GitHub Pages, and this Next.js template isn't static. Understanding the difference between static and dynamic pages can be complex. As far as I know, if all users have the same features, it qualifies as a static website, even if it uses Restful connections and data fetched from outside the domain. But practically speaking, if it's "export" possible and deployable on GitHub Pages, then it's static to me.
+
+I attempted to convert this cool app to static and failed miserably. The page view count feature and the rest API connection had to be removed. Eventually, I managed to deploy the website on GitHub Pages, albeit with some bugs.
+
+The template utilizes [contentlayer/generated](https://contentlayer.dev). By simply creating an MDX file in the content/projects directory, a new project post is generated on the Project pages. It's super simple and cool. However, the top three featured pages need to be selected and hardcoded in App>projects>pages.tsx like below.
+
+```ts
+const featured = allProjects.find((project) => project.slug === "fireupkoreanalphabet")!;
+const top2 = allProjects.find((project) => project.slug === "techxxy.github.io")!;
+const top3 = allProjects.find((project) => project.slug === "appleKeyboard")!;
+```
+
+In the content/projects directory, there are files like fireupkoreanalphabet.mdx and many more .mdx files. Unfortunately, I can't change the names of these three files without risking deployment issues on GitHub Pages. 
+
+But for now, I'm content with this bug. After all, who cares about a file name? I can always change their contents.
