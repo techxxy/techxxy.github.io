@@ -9,6 +9,7 @@ export const metadata: Metadata = {
     default: "techxxy",
     template: "%s | techxxy",
   },
+  description: "Explore my projects and the evolving narrative of my growth as a developer.",
   robots: {
     index: true,
     follow: true,
