@@ -1,0 +1,37 @@
+---
+title: Icons
+description: Discover convenient solutions for integrating icons into your projects
+url: https://techxxy.github.io/documentation/icons
+date: 2024-03-01
+published: true
+---
+
+When you don't know how to find and use icons, it can initially seem daunting. However, once you grasp the process, it becomes relatively simple. Here are two key things to remember when integrating icons into various types of projects:
+
+1. **[SF Symbols](https://developer.apple.com/sf-symbols)** for Mac & iOS Projects
+2. **[React-icons](https://react-icons.github.io/react-icons)** for All Projects
+
+## iOS/Mac Projects
+
+Utilize the Mac application [SF Symbols](https://developer.apple.com/sf-symbols) for seamless integration of icons into your iOS projects. Simply install SF Symbols on your Mac, search for the desired icon, and copy it into Xcode for immediate use.
+
+![](/sfsymbols.png)
+
+## React/Next.js Projects
+For React (Next.js) projects, consider leveraging libraries such as [React-icons](https://react-icons.github.io/react-icons). This comprehensive library includes various open-source icon sets like [Lucide](https://lucide.dev/icons/), [Bootstrap](https://icons.getbootstrap.com/) and [Google Material UI](https://mui.com/material-ui/material-icons/). Installation instructions are provided at the bottom of the React-icons page and are straightforward to follow. Keep in mind that multiple import statements may be necessary as icons from different packages might be sourced.
+
+``` ts
+import { IoWarningOutline } from "react-icons/io5";
+import { PiNumberCircleOneFill } from "react-icons/pi";
+import { HiOutlineRectangleStack } from "react-icons/hi2";
+<PiNumberCircleOneFill />
+<HiOutlineRectangleStack />
+<IoWarningOutline size="24" />
+```
+
+## Other Types of Projects
+
+Explore individual icon downloads available on websites listed within [React-icons](https://react-icons.github.io/react-icons). Websites such as [Bootstrap](https://icons.getbootstrap.com/) offer SVG downloads for individual icons, while [Lucide](https://lucide.dev/icons/) provides various formats including SVG. These icons can then be directly included in projects, such as a simple HTML site, and even in Mac projects as image assets.
+
+![](/lucide.png)
+
